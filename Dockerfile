@@ -41,6 +41,7 @@ COPY ./configs/supervisord.conf /etc/supervisor/conf.d/supervisord.conf
 COPY ./configs/sshd_config /etc/ssh/sshd_config
 
 RUN npm install -g selenium-standalone
+RUN /usr/bin/selenium-standalone install
 
 # Needed for build (should be second Dockerfile)
 RUN apt-get install -y -q \
